@@ -42,7 +42,7 @@ done
 
 ```
 /gh-create-plan owner/repo        # Create a plan issue in the given repo
-/gh-read-plan owner/repo#42      # Read the plan into the current session
+/gh-read-plan owner/repo#42       # Read the plan into the current session
 /gh-implement-plan owner/repo#42  # Start implementing the plan
 /gh-update-plan                   # Update the plan after a session
 /gh-close-plan                    # Finalize and close the plan
