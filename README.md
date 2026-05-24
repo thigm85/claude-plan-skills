@@ -59,4 +59,4 @@ After creating an issue, the skills accept a URL or `owner/repo#number`. If a pl
 ## Related
 
 - [Claude Code Doesn't Remember. Here's How I Fixed That.](https://medium.com/@gjoranv/claude-code-doesnt-remember-here-s-how-i-fixed-that-0992cbeb6d37) - how these skills work and why GitHub issues are the persistence layer
-- [I Don't Start With a Plan. Here's What I Do First.](https://medium.com/@gjoranv/i-dont-start-with-a-plan-here-s-what-i-do-first-9f6192177298) - the investigation phase that comes before creating a plan
+- [I Don't Start With a Plan. Here's What I Do First.](https://medium.com/@gjoranv/i-dont-start-with-a-plan-here-s-what-i-do-first-9f6192177298) - the investigation phase before creating a plan, and the handover skill for continuing across sessions
