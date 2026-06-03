@@ -25,7 +25,10 @@ Before creating the plan, ask the user if there are related repos with similar i
 
 1. **Design comment**: The how. Technical approach, key abstractions, boundaries, trade-offs. This is where design changes are tracked.
 2. **Steps comment**: Group steps under numbered headings (`### Step 1: ...`, `### Step 2: ...`). Each step contains checkboxes for its sub-tasks. Always number the top-level steps explicitly. For each step, note which other steps it depends on (e.g., "Depends on step 2"). Mark independent steps as such. This makes it easy to work on steps in parallel across conversations.
-3. **Diagram comment**: Show the flow, structure, or relationships. Use the most appropriate chart type (prefer Mermaid over ASCII). Short caption (three sentences max, no "Caption:" prefix).
+3. **Diagram comment**: Show the flow, structure, or relationships using Mermaid (not ASCII). Pick the right diagram type for the content:
+   - **Temporal flow** (request handling, build pipeline, event sequence): `sequenceDiagram`.
+   - **Static structure** (components, dependencies, what connects to what): `flowchart` with `subgraph` for grouping and `classDef` for color-coded categories.
+   Short caption (three sentences max, no "Caption:" prefix).
 4. **Links comment**: Links to relevant documentation, code, resources, and related issues. Updated as new child issues, PRs, or useful references are found.
 
 Format the issue in a clear and organized way, using headings, subheadings, bullet points, and tables as needed to enhance readability.
