@@ -8,13 +8,14 @@ Claude Code starts fresh every session. Complex tasks that span multiple convers
 
 ## The solution
 
-Use a GitHub issue as a persistent plan. Six skills manage the full lifecycle:
+Use a GitHub issue as a persistent plan. Seven skills manage the full lifecycle:
 
 | Skill | What it does |
 |---|---|
 | `/gh-create-plan` | Creates a structured GitHub issue with description, design, steps, diagram, and links as separate comments |
 | `/gh-read-plan` | Reads the issue, identifies completed and pending steps, and briefs the session |
 | `/gh-implement-plan` | Works through steps in order, commits after each step, checks off checkboxes |
+| `/gh-implement-plan-guided` | Like implement-plan, but with plain-language explanations and explicit approval between steps |
 | `/gh-update-plan` | Updates the issue with session progress, new decisions, and a commits table |
 | `/gh-close-plan` | Consolidates session logs, captures learnings, finalizes commit hashes, and closes |
 | `/handover` | Prepares a handover prompt for continuing work in a new session |
@@ -51,7 +52,8 @@ cp -r gh-create-plan gh-read-plan gh-implement-plan gh-update-plan gh-close-plan
 ```
 /gh-create-plan owner/repo        # Create a plan issue in the given repo
 /gh-read-plan owner/repo#42       # Read the plan into the current session
-/gh-implement-plan owner/repo#42  # Start implementing the plan
+/gh-implement-plan owner/repo#42         # Start implementing the plan
+/gh-implement-plan-guided owner/repo#42  # Implement with explanations between steps
 /gh-update-plan                   # Update the plan after a session
 /gh-close-plan                    # Finalize and close the plan
 /handover                         # Prepare a handover for a new session
