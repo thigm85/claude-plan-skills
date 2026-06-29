@@ -8,7 +8,7 @@ Claude Code starts fresh every session. Complex tasks that span multiple convers
 
 ## The solution
 
-Use a GitHub issue as a persistent plan. Seven skills manage the full lifecycle:
+Use a GitHub issue as a persistent plan. Eight skills manage the full lifecycle:
 
 | Skill | What it does |
 |---|---|
@@ -18,6 +18,7 @@ Use a GitHub issue as a persistent plan. Seven skills manage the full lifecycle:
 | `/gh-implement-plan-guided` | Like implement-plan, but with plain-language explanations and explicit approval between steps |
 | `/gh-update-plan` | Updates the issue with session progress, new decisions, and a commits table |
 | `/gh-close-plan` | Consolidates session logs, captures learnings, finalizes commit hashes, and closes |
+| `/gh-slack-status` | Generates a Slack-ready summary of completed work since a date and upcoming steps from open issues |
 | `/handover` | Prepares a handover prompt for continuing work in a new session |
 
 A new conversation can pick up exactly where the last one left off by reading the issue with `/gh-read-plan`, or by pasting a `/handover` prompt from the previous session.
@@ -27,7 +28,7 @@ A new conversation can pick up exactly where the last one left off by reading th
 Copy the skill directories into your Claude Code skills folder:
 
 ```bash
-cp -r gh-create-plan gh-read-plan gh-implement-plan gh-update-plan gh-close-plan handover ~/.claude/skills/
+cp -r gh-create-plan gh-read-plan gh-implement-plan gh-update-plan gh-close-plan gh-slack-status handover ~/.claude/skills/
 ```
 
 Or clone and symlink (recommended — picks up new skills on `git pull`):
@@ -44,7 +45,7 @@ done
 These skills are agent-neutral and work with Codex. Copy them to the Codex skills folder:
 
 ```bash
-cp -r gh-create-plan gh-read-plan gh-implement-plan gh-update-plan gh-close-plan handover ~/.codex/skills/
+cp -r gh-create-plan gh-read-plan gh-implement-plan gh-update-plan gh-close-plan gh-slack-status handover ~/.codex/skills/
 ```
 
 ## Usage
@@ -56,6 +57,7 @@ cp -r gh-create-plan gh-read-plan gh-implement-plan gh-update-plan gh-close-plan
 /gh-implement-plan-guided owner/repo#42  # Implement with explanations between steps
 /gh-update-plan                   # Update the plan after a session
 /gh-close-plan                    # Finalize and close the plan
+/gh-slack-status --since friday owner/repo  # Slack summary of progress
 /handover                         # Prepare a handover for a new session
 ```
 
