@@ -45,17 +45,17 @@ bash ~/.claude/claude-plan-skills/gh-slack-status/scripts/fetch-issue-activity.s
    - Incorporar itens extras que o usuário pedir (ex.: "explorar o produto")
 6. **Formatar para Slack** e entregar o texto final — pronto para colar, sem explicação extra.
 
-## Template Slack (mrkdwn)
+## Template Slack
 
 ```
 *O que foi feito (desde {since_label})*
 
 • *{Categoria}*
-    ◦ {frase simples} (<https://github.com/{repo}/issues/{N}|#{N}>)
+    ◦ {frase simples} ([#{N}](https://github.com/{repo}/issues/{N}))
 
 *Próximos passos*
 
-• *{Título da frente}* (<https://github.com/{repo}/issues/{N}|#{N}>)
+• *{Título da frente}* ([#{N}](https://github.com/{repo}/issues/{N}))
     ◦ {contexto ou bloqueador}
     ◦ {próxima ação}
 
@@ -65,7 +65,7 @@ bash ~/.claude/claude-plan-skills/gh-slack-status/scripts/fetch-issue-activity.s
 ## Regras de estilo
 
 - Português brasileiro, tom direto, sem jargão desnecessário
-- Links no formato Slack: `<https://github.com/OWNER/REPO/issues/N|#N>`
+- Links de issue: `[#N](https://github.com/OWNER/REPO/issues/N)` — só o número visível; nunca expor a URL no texto nem usar formato Slack `<url|#N>`
 - Negrito no Slack: `*texto*` (não `**texto**`)
 - Bullets: `•` para nível 1, `◦` para sub-itens (4 espaços de indentação)
 - Não listar issues abertas sem trabalho pendente relevante

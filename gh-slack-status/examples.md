@@ -25,38 +25,38 @@ Repo: `fscampini/operscale`, `--since 2026-06-27`
 }
 ```
 
-## Saída esperada (Slack mrkdwn)
+## Saída esperada
 
 ```
 *O que foi feito (desde sexta-feira)*
 
 • *Conciliação bancária*
-    ◦ A conciliação passou a rodar em segundo plano, sem travar a tela quando a requisição demora (<https://github.com/fscampini/operscale/issues/17|#17>)
-    ◦ O código dessa melhoria foi integrado na `main` (<https://github.com/fscampini/operscale/issues/20|#20>)
+    ◦ A conciliação passou a rodar em segundo plano, sem travar a tela quando a requisição demora ([#17](https://github.com/fscampini/operscale/issues/17))
+    ◦ O código dessa melhoria foi integrado na `main` ([#20](https://github.com/fscampini/operscale/issues/20))
 
 • *Importação de obrigações*
-    ◦ O preview de importação de obrigações voltou a funcionar em produção, corrigindo o timeout de 60 segundos (<https://github.com/fscampini/operscale/issues/14|#14>)
-    ◦ Também foram corrigidos problemas de CORS e limite de upload nesse fluxo (<https://github.com/fscampini/operscale/issues/21|#21>)
+    ◦ O preview de importação de obrigações voltou a funcionar em produção, corrigindo o timeout de 60 segundos ([#14](https://github.com/fscampini/operscale/issues/14))
+    ◦ Também foram corrigidos problemas de CORS e limite de upload nesse fluxo ([#21](https://github.com/fscampini/operscale/issues/21))
 
 • *Segurança e infraestrutura AWS*
-    ◦ O hardening de IAM do MVP foi feito: permissões mais restritas, sem `AdministratorAccess` (<https://github.com/fscampini/operscale/issues/22|#22>)
-    ◦ A policy IAM no repositório foi alinhada com o que está na AWS (<https://github.com/fscampini/operscale/issues/24|#24>)
-    ◦ A implementação completa do MVP na EC2 (Terraform, app, release e passos finais de IAM) foi encerrada (<https://github.com/fscampini/operscale/issues/8|#8>)
+    ◦ O hardening de IAM do MVP foi feito: permissões mais restritas, sem `AdministratorAccess` ([#22](https://github.com/fscampini/operscale/issues/22))
+    ◦ A policy IAM no repositório foi alinhada com o que está na AWS ([#24](https://github.com/fscampini/operscale/issues/24))
+    ◦ A implementação completa do MVP na EC2 (Terraform, app, release e passos finais de IAM) foi encerrada ([#8](https://github.com/fscampini/operscale/issues/8))
 
 • *Site de marketing*
-    ◦ O diretório do site institucional com a landing page foi adicionado ao repositório (<https://github.com/fscampini/operscale/issues/23|#23>)
+    ◦ O diretório do site institucional com a landing page foi adicionado ao repositório ([#23](https://github.com/fscampini/operscale/issues/23))
 
 *Próximos passos*
 
-• *Colocar o site de marketing no ar* (<https://github.com/fscampini/operscale/issues/18|#18>)
+• *Colocar o site de marketing no ar* ([#18](https://github.com/fscampini/operscale/issues/18))
     ◦ O código da landing page e o DNS na Cloudflare já estão prontos; o próximo passo é criar a org no GitHub e transferir o repositório de `fscampini/operscale` para ela (bloqueador atual).
     ◦ Depois disso: conectar o Cloudflare Pages ao repo, publicar o site em `www.operscale.ai` com HTTPS e validar redirects e email.
 
-• *Painel de conciliação para admins + execução automática* (<https://github.com/fscampini/operscale/issues/19|#19>)
+• *Painel de conciliação para admins + execução automática* ([#19](https://github.com/fscampini/operscale/issues/19))
     ◦ Criar tela para `global_admin` ver execuções de conciliação de todos os clientes.
     ◦ Configurar Celery Beat para rodar a conciliação automaticamente (pass noturno).
 
-• *Limpar a pasta de infraestrutura* (<https://github.com/fscampini/operscale/issues/11|#11>)
+• *Limpar a pasta de infraestrutura* ([#11](https://github.com/fscampini/operscale/issues/11))
     ◦ Remover artefatos Terraform de ambientes não usados no MVP (dev/staging/production) e esqueletos de ECS.
     ◦ Confirmar que esses ambientes nunca foram aplicados na AWS antes de apagar.
 ```
